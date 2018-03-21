@@ -26,12 +26,23 @@
         android:padding="20dp" />
 
     <Button
-        android:layout_width="150dp"
-        android:layout_marginLeft="160dp"
+        android:layout_width="200dp"
+        android:layout_gravity="center"
         android:layout_height="wrap_content"
         android:id="@+id/login"
         android:layout_marginTop="20dp"
         android:text="Log in"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lrefer"
+        android:text="@string/signup_for_new_account"
+        android:layout_gravity="center"
+        android:padding="40dp"
+        android:textSize="20sp"/>
+
+
 
     
 </LinearLayout>
