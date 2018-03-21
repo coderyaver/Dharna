@@ -1,6 +1,7 @@
 package com.example.hrishabh.dharna;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -36,14 +37,22 @@ public class Login extends AppCompatActivity {
         lauth=FirebaseAuth.getInstance();
         textView=(TextView) findViewById(R.id.lrefer);
 
+        textView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(Login.this,Signup.class);
+                startActivity(intent);
+            }
+        });
+
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(TextUtils.isEmpty(luser.getText().toString().trim())){
-                    Toast.makeText(Login.this,"Enter Email",Toast.LENGTH_SHORT);
+                    Toast.makeText(Login.this,"Enter Email",Toast.LENGTH_SHORT).show();
                     return;
                 } else if(TextUtils.isEmpty(lpass.getText().toString().trim())){
-                    Toast.makeText(Login.this,"Enter Pass",Toast.LENGTH_SHORT);
+                    Toast.makeText(Login.this,"Enter Pass",Toast.LENGTH_SHORT).show();
                     return;
                 } else{
                     lprogressDialog.setMessage("Logging in");
