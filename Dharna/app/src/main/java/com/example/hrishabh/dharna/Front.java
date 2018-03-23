@@ -24,6 +24,5 @@ public class Front extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
     }
 }

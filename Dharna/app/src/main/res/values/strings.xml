@@ -16,4 +16,5 @@
     </string>
     <string name="signup_for_new_account"><u>Signup for new account</u></string>
     <string name="already_registered_sign_in"><u>Already registered, Sign In</u></string>
+    <string name="reset_forgot_password"><u>Reset/Forgot Password</u></string>
 </resources>

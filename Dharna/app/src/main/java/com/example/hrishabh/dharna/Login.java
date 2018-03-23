@@ -23,7 +23,7 @@ public class Login extends AppCompatActivity {
     private EditText luser,lpass;
     FirebaseAuth lauth;
     ProgressDialog lprogressDialog;
-    TextView textView;
+    TextView textView,reset;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +36,15 @@ public class Login extends AppCompatActivity {
         login=(Button) findViewById(R.id.login);
         lauth=FirebaseAuth.getInstance();
         textView=(TextView) findViewById(R.id.lrefer);
+        reset=(TextView) findViewById(R.id.lreset);
+
+        reset.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(Login.this,Reset.class);
+                startActivity(intent);
+            }
+        });
 
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,10 +58,10 @@ public class Login extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(TextUtils.isEmpty(luser.getText().toString().trim())){
-                    Toast.makeText(Login.this,"Enter Email",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Login.this,"Username can't be left empty",Toast.LENGTH_SHORT).show();
                     return;
                 } else if(TextUtils.isEmpty(lpass.getText().toString().trim())){
-                    Toast.makeText(Login.this,"Enter Pass",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Login.this,"Password can't be left empty",Toast.LENGTH_SHORT).show();
                     return;
                 } else{
                     lprogressDialog.setMessage("Logging in");
@@ -63,6 +72,7 @@ public class Login extends AppCompatActivity {
                             if(task.isSuccessful()){
                                 Toast.makeText(Login.this,"Logged in",Toast.LENGTH_SHORT).show();
                                 lprogressDialog.dismiss();
+
                             } else{
                                 Toast.makeText(Login.this,"Login fail, try again",Toast.LENGTH_SHORT).show();
                                 lprogressDialog.dismiss();
