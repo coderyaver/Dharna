@@ -52,9 +52,9 @@ public class Reset extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         if(task.isSuccessful()){
-                            textView.setText("Check you email id to reset your password");
+                            textView.setText("Check your email id to reset your password");
                             progressDialog.dismiss();
-                            
+
                         } else{
                             textView.setText("Password resetting failed, try again");
                             progressDialog.dismiss();
