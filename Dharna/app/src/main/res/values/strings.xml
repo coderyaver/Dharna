@@ -17,4 +17,13 @@
     <string name="signup_for_new_account"><u>Signup for new account</u></string>
     <string name="already_registered_sign_in"><u>Already registered, Sign In</u></string>
     <string name="reset_forgot_password"><u>Reset/Forgot Password</u></string>
+    <string name="name_of_the_organisation_leader">Name of the organisation/leader</string>
+    <string name="topic_issue">Topic/Issue</string>
+    <string name="place_of_dharna_starting_point_of_dharna">Place of Dharna/Starting point of Dharna</string>
+    <string name="date_of_start_of_dharna">Starting Date of Dharna</string>
+    <string name="time_of_start">Time of Start</string>
+    <string name="description">Description</string>
+    <string name="submit">submit</string>
+    <string name="todo">TODO</string>
+    <string name="datepicker">datepicker</string>
 </resources>

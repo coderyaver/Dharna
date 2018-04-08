@@ -61,8 +61,7 @@ public class Signup extends AppCompatActivity {
                         Toast.makeText(Signup.this, "Enter Password", Toast.LENGTH_SHORT).show();
                         return;
                     } else {
-                        Log.d("tag", "proceed");
-                        Toast.makeText(Signup.this, "Proceed", Toast.LENGTH_SHORT).show();
+
                         progressDialog.setMessage("Registering User...");
                         progressDialog.show();
                         mAuth.createUserWithEmailAndPassword(email.getText().toString().trim(), pass.getText().toString().trim()).addOnCompleteListener(Signup.this, new OnCompleteListener<AuthResult>() {

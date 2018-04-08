@@ -8,7 +8,7 @@ import android.widget.Button;
 
 public class Front extends AppCompatActivity {
 
-    private Button button;
+    private Button button,b;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,6 +16,15 @@ public class Front extends AppCompatActivity {
         setContentView(R.layout.activity_front);
 
         button=(Button) findViewById(R.id.test);
+        b=(Button) findViewById(R.id.rb);
+
+        b.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(Front.this,DharnaRegister.class);
+                startActivity(intent);
+            }
+        });
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
