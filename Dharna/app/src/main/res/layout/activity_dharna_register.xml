@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="20dp"
-    tools:context="com.example.hrishabh.dharna.DharnaRegister">
+    tools:context=".DharnaRegister">
 
     <EditText
         android:layout_width="match_parent"
@@ -15,7 +15,7 @@
         android:id="@+id/name"
         android:inputType="textPersonName"
         android:padding="20dp"/>
-    
+
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -72,7 +72,7 @@
         android:layout_height="wrap_content"
         android:inputType="textMultiLine"
         android:padding="20dp"
-        android:id="@+id/des"
+        android:id="@+id/dis"
         android:lines="7"
         android:hint="@string/description"/>
 
@@ -84,7 +84,5 @@
         android:padding="20dp"
         android:layout_gravity="center"
         android:layout_marginBottom="50dp"/>
-
-    
 
 </LinearLayout>
